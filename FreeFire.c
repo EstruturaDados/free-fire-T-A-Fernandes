@@ -107,3 +107,29 @@ void listarItens() {
 
     printf("-------------------------------------------------\n");
 }
+
+// Exibe o menu principal
+void menu() {
+    int opcao;
+
+    do {
+        printf("\n=============================================================\n");
+        printf("       🎒 MOCHILA DE SOBREVIVENCIA - CODIGO DA ILHA 🎮     \n");
+        printf("=============================================================\n");
+        printf("Itens na mochila: %d/%d\n", qtdItens, MAX_ITENS);
+        printf("1. Adicionar item\n");
+        printf("2. Remover item\n");
+        printf("3. Listar itens\n");
+        printf("0. Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1: inserirItem(); break;
+            case 2: removerItem(); break;
+            case 3: listarItens(); break;
+            case 0: printf("\nSaindo da mochila... Até a próxima missão!\n"); break;
+            default: printf("\n❌ Opção inválida! Tente novamente.\n");
+        }
+    } while (opcao != 0);
+}
