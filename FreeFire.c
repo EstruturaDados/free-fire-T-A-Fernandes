@@ -32,6 +32,37 @@ int qtdItens = 0;         // Contador de itens cadastrados
 // FUNÇÕES
 // -------------------------------
 
+// Busca de item na mochila
+void buscarItemVetor(){
+    if (qtdItens == 0){
+        printf("\nA mochila esta vazia!\n");
+        return;
+    }
+
+    char nomeBusca[TAM_NOME];
+    int encontrado = 0;
+
+    printf("\n--- BUSCAR ITEM ---\n");
+    printf("Digite o nome do item: ");
+    scanf(" %[^\n]", nomeBusca);
+
+    for (int i = 0; i < qtdItens; i++) {
+        if (strcmp(mochila[i].nome, nomeBusca) == 0) {
+            printf("\n--- Item Encontrado! ---\n");
+            printf("Nome: %s\n", mochila[i].nome);
+            printf("Tipo: %s\n", mochila[i].tipo);
+            printf("Quantidade: %d\n", mochila[i].quantidade);
+            printf("------------------------\n");
+            encontrado = 1;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        printf("\n❌ Item não encontrado na mochila.\n");
+    }
+}
+
 // Cadastra um novo item na mochila
 void inserirItem() {
     if (qtdItens >= MAX_ITENS) {
