@@ -48,7 +48,7 @@ void buscarItemVetor(){
 
     for (int i = 0; i < qtdItens; i++) {
         if (strcmp(mochila[i].nome, nomeBusca) == 0) {
-            printf("\n--- Item Encontrado! ---\n");
+            printf("\n--- ✅ Item Encontrado! ---\n");
             printf("Nome: %s\n", mochila[i].nome);
             printf("Tipo: %s\n", mochila[i].tipo);
             printf("Quantidade: %d\n", mochila[i].quantidade);
