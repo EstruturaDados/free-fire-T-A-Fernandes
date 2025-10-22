@@ -139,7 +139,9 @@ void listarItens() {
     printf("-------------------------------------------------\n");
 }
 
+// -----------------------------
 // Exibe o menu principal
+// -----------------------------
 void menu() {
     int opcao;
 
@@ -151,6 +153,7 @@ void menu() {
         printf("1. Adicionar item\n");
         printf("2. Remover item\n");
         printf("3. Listar itens\n");
+        printf("4. Buscar item na mochila\n");
         printf("0. Sair\n");
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
