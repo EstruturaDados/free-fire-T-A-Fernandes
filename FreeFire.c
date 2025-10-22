@@ -162,6 +162,7 @@ void menu() {
             case 1: inserirItem(); break;
             case 2: removerItem(); break;
             case 3: listarItens(); break;
+            case 4: buscarItemVetor(); break;
             case 0: printf("\nSaindo da mochila... Até a próxima missão!\n"); break;
             default: printf("\n❌ Opção inválida! Tente novamente.\n");
         }
